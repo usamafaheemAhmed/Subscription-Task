@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Step Calculator</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <main class="container">
+      <div class="row justify-content-center align-content-md-center vh-100">
+        <div class="p-0 all-area">
+          <div
+            class="card text-left w-100"
+            style="border-radius: 10px; padding: 0px 13px 0px 13px"
+          >
+            <div class="row p-0 p-md-3">
+              <div class="col-md-4 p-0">
+                <div class="position-relative overflow-hidden">
+                  <div
+                    class="position-absolute top-0 left-0 w-100 h-100 px-4 py-4 d-flex flex-row flex-md-column gap-4 justify-content-center justify-content-md-start align-items-center text-light"
+                  >
+                    <div class="w-100 d-flex">
+                      <div
+                        class="rounded-circle border steps active"
+                        id="leftStep1"
+                      >
+                        <p>1</p>
+                      </div>
+                      <div class="step_text d-none d-md-block">
+                        <p>STEP 1</p>
+                        YOUR INFO
+                      </div>
+                    </div>
+                    <div class="w-100 d-flex">
+                      <div class="rounded-circle border steps" id="leftStep2">
+                        <p>2</p>
+                      </div>
+                      <div class="step_text d-none d-md-block">
+                        <p>STEP 2</p>
+                        SELECT PLAN
+                      </div>
+                    </div>
+                    <div class="w-100 d-flex">
+                      <div class="rounded-circle border steps" id="leftStep3">
+                        <p>3</p>
+                      </div>
+                      <div class="step_text d-none d-md-block">
+                        <p>STEP 3</p>
+                        ADD-ONS
+                      </div>
+                    </div>
+                    <div class="w-100 d-flex">
+                      <div class="rounded-circle border steps" id="leftStep4">
+                        <p>4</p>
+                      </div>
+                      <div class="step_text d-none d-md-block">
+                        <p>STEP 4</p>
+                        SUMMARY
+                      </div>
+                    </div>
+                  </div>
+                  <img
+                    class="card-img-top d-none d-md-block image-fluid"
+                    src="./assets/images/bg-sidebar-desktop.svg"
+                    alt=""
+                  />
+                  <img
+                    class="card-img-top d-block d-md-none image-fluid"
+                    src="./assets/images/bg-sidebar-mobile.svg"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="col-md-8 position-relative">
+                <div class="card-body p-0">
+                  <div class="text-left second-Card pe-4 pe-md-5" id="Step1">
+                    <h4 class="card-title">Personal info</h4>
+                    <p class="card-text">
+                      Please provide your name, email address, and phone number.
+                    </p>
+
+                    <div class="mb-3">
+                      <label for="" class="form-label">Name</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="Name"
+                        id="Name"
+                        aria-describedby="helpId"
+                        placeholder="e.g. Stephen King"
+                      />
+                      <small id="helpId" class="form-text text-muted d-none"
+                        >Please Enter Your Full-Name here</small
+                      >
+                    </div>
+
+                    <div class="mb-3">
+                      <label for="" class="form-label">Email</label>
+                      <input
+                        type="email"
+                        class="form-control"
+                        name="email"
+                        id="email"
+                        aria-describedby="emailHelpId"
+                        placeholder="e.g abc@mail.com"
+                      />
+                      <small
+                        id="emailHelpId"
+                        class="form-text text-muted d-none"
+                        >Enter Valid Email</small
+                      >
+                    </div>
+
+                    <div class="mb-3">
+                      <label for="" class="form-label">Phone</label>
+                      <input
+                        type="text"
+                        name="Phone"
+                        id="Phone"
+                        class="form-control"
+                        placeholder="e.g. +92 3xx xxxxxxx"
+                        aria-describedby="helpId"
+                      />
+                      <small id="PhoneHelpId" class="text-muted d-none"
+                        >Please Enter Valid Phone</small
+                      >
+                    </div>
+                  </div>
+                  <div class="text-left second-Card pe-4 pe-md-5 d-none" id="Step2" >
+                    <h4 class="card-title">Select your plan</h4>
+                    <p class="card-text">
+                      You have the option of monthly or yearly billing.
+                    </p>
+
+                    <div class="row">
+                      <div class="col-md-4 pe-0">
+                        <input
+                          type="radio"
+                          name="Plan"
+                          id="Arcade-plan"
+                          value="9"
+                          class="Radio_IO d-none"
+                        />
+                        <label for="Arcade-plan" class="border Plan-Option">
+                          <div class="image">
+                            <img
+                              src="./assets/images/icon-arcade.svg"
+                              alt="arcades"
+                            />
+                          </div>
+                          <div>
+                            <p class="m-0"><strong>Arcade</strong></p>
+                            <p id="plan-Price1">$9/mo</p>
+                            <p class="2mF d-none">2 months free</p>
+                          </div>
+                        </label>
+                      </div>
+                      <div class="col-md-4 pe-0">
+                        <input
+                          type="radio"
+                          name="Plan"
+                          id="Advace-plan"
+                          value="12"
+                          class="Radio_IO d-none"
+                        />
+                        <label for="Advace-plan" class="border Plan-Option">
+                          <div class="image">
+                            <img
+                              src="./assets/images/icon-advanced.svg"
+                              alt="arcades"
+                            />
+                          </div>
+                          <div>
+                            <p class="m-0"><strong>Advanced</strong></p>
+                            <p id="plan-Price2">$12/mo</p>
+                            <p class="2mF d-none">2 months free</p>
+                          </div>
+                        </label>
+                      </div>
+                      <div class="col-md-4 pe-0">
+                        <input
+                          type="radio"
+                          name="Plan"
+                          id="Pro-plan"
+                          value="15"
+                          class="Radio_IO d-none"
+                        />
+                        <label for="Pro-plan" class="border Plan-Option">
+                          <div class="image">
+                            <img
+                              src="./assets/images/icon-pro.svg"
+                              alt="arcades"
+                            />
+                          </div>
+                          <div>
+                            <p class="m-0"><strong>Pro</strong></p>
+                            <p id="plan-Price3">$15/mo</p>
+                            <p class="2mF d-none">2 months free</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+
+                    <div class="row mt-3 px-3">
+                      <div class="col-md-12 bg-skyBlue">
+                        <div class="row mt-2">
+                          <div class="col-5 text-end">
+                            <label
+                              id="Monthly"
+                              class="form-check-label"
+                              for="Yearly"
+                              >Monthly</label
+                            >
+                          </div>
+                          <div class="col-2">
+                            <div class="form-check form-switch">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="YearlyInput"
+                                name="monthly_Yearly"
+                                onchange="switchToYear(this.checked)"
+                              />
+                            </div>
+                          </div>
+                          <div class="col-5">
+                            <label
+                              id="Yearly"
+                              class="form-check-label"
+                              for="Yearly"
+                              >Year</label
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="text-left second-Card pe-4 pe-md-5 d-none" id="Step3" >
+                    <h4 class="card-title">Pick add-ons</h4>
+                    <p class="card-text">
+                      Add-ons help enhance your gaming experience.
+                    </p>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <label
+                          for="Online_Server"
+                          class="Picks-Option d-flex justify-content-start align-items-center gap-2 border"
+                        >
+                          <div class="me-4">
+                            <input
+                              type="checkbox"
+                              name="add_Ons"
+                              id="Online_Server"
+                              value="1"
+                              onchange="addonSelect(this.id)"
+                            />
+                          </div>
+                          <div class="w-75 pt-1">
+                            <h6 class="m-0">Online service</h6>
+                            <p class="card-text">Access to multiplayer games</p>
+                          </div>
+                          <div class="w-25">
+                            <span class="addOnCost">+$1/mo</span>
+                          </div>
+                        </label>
+                      </div>
+                      <div class="col-md-12">
+                        <label
+                          for="Larger_storage"
+                          class="Picks-Option d-flex justify-content-start align-items-center gap-2 border"
+                        >
+                          <div class="me-4">
+                            <input
+                              type="checkbox"
+                              name="add_Ons"
+                              id="Larger_storage"
+                              value="2"
+                              onchange="addonSelect(this.id)"
+                            />
+                          </div>
+                          <div class="w-75 pt-1">
+                            <h6 class="m-0">Larger storage</h6>
+                            <p class="card-text">Extra 1TB of cloud save</p>
+                          </div>
+                          <div class="w-25">
+                            <span class="addOnCost">+$2/mo</span>
+                          </div>
+                        </label>
+                      </div>
+                      <div class="col-md-12">
+                        <label
+                          for="Customizable_Profile"
+                          class="Picks-Option d-flex justify-content-start align-items-center gap-2 border"
+                        >
+                          <div class="me-4">
+                            <input
+                              type="checkbox"
+                              name="add_Ons"
+                              id="Customizable_Profile"
+                              value="2"
+                              onchange="addonSelect(this.id)"
+                            />
+                          </div>
+                          <div class="w-75 pt-1">
+                            <h6 class="m-0">Customizable Profile</h6>
+                            <p class="card-text">
+                              Custom theme on your profile
+                            </p>
+                          </div>
+                          <div class="w-25">
+                            <span class="addOnCost">+$2/mo</span>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="text-left second-Card pe-4 pe-md-5 d-none" id="Step4" >
+                    <h4 class="card-title">Finishing up</h4>
+                    <p class="card-text">
+                      Double-check everything looks OK before confirming.
+                    </p>
+                    <div class="finisherTotal">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="d-flex" id="PS_Plan">
+                            <!-- <div class="w-75">
+                              <h6 class="m-0">Arcade</h6>
+                              <a href="#" class="card-text">Change</a>
+                            </div>
+                            <div class="w-25 pt-2">
+                              <strong><span>+$1/mo</span></strong>
+                            </div> -->
+                          </div>
+                          <hr />
+                        </div>
+                      </div>
+                      <div class="row" id="PS_AddOns">
+                        <!-- <div class="col-md-12">
+                          <div class="d-flex">
+                            <div class="w-75">
+                              <p class="card-text">Online service</p>
+                            </div>
+                            <div class="w-25">
+                              <p>+$1/mo</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <div class="d-flex">
+                            <div class="w-75">
+                              <p class="card-text">Larger storage</p>
+                            </div>
+                            <div class="w-25">
+                              <p>+$2/mo</p>
+                            </div>
+                          </div>
+                        </div> -->
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-md-12 px-4">
+                        <div class="d-flex">
+                          <div class="w-75">
+                            <p class="card-text">
+                              Total <span id="TYearly_Monthly">(per Year)</span>
+                            </p>
+                          </div>
+                          <div class="w-50 text-end">
+                            <h5 class="total" id="Total_Amount">+$2/mo</h5>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="text-left second-Card pe-4 pe-md-5 d-none" id="Step5" >
+                    <div class="thankyou">
+                      <div>
+                        <img
+                          src="./assets/images/icon-thank-you.svg"
+                          alt="thankyou"
+                        />
+                      </div>
+                      <div class="mt-5">
+                        <h4 class="card-title">Thank you!</h4>
+                        <p class="card-text">
+                          Thanks for confirming your subscription! We hope you
+                          have fun using our platform. If you ever need support,
+                          please feel free to email us at
+                          <a
+                            href="mailto:work.usamafaheem@outlook.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >work.usamafaheem@outlook.com</a
+                          >.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="buttonHead d-none d-md-block">
+                    <button
+                      type="button"
+                      class="btn btn-Navay"
+                      id="NextBtn"
+                      onclick="Step()"
+                    >
+                      Next step
+                    </button>
+                  </div>
+                  <div class="buttonHead2 d-none d-md-block">
+                    <a
+                      href="#"
+                      type="button"
+                      class="btn d-none"
+                      id="BackBtn"
+                      onclick="BackStep()"
+                    >
+                      GO Back
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="container-fluid p-0">
+      <div
+        class="d-block d-md-none position-absolute bottom-0 left-0 w-100 container  "
+        style="margin: 10px 0px 5vh 0px;"
+      >
+        <div class="row ">
+          <div class="col-6">
+            <a href="#" type="button" class="btn d-none ms-4" id="BackBtn2" onclick="BackStep()">
+              GO Back
+            </a></div>
+          <div class="col-6">        
+            <button type="button" class="btn btn-Navay float-end me-3" id="NextBtn2" onclick="Step()">
+              Next step
+            </button>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
